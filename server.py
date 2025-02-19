@@ -11,6 +11,11 @@ def receber_dados():
 
 
 @app.route('/')
+def home():
+    return "Servidor rodando!", 200
+
+
+@app.route('/')
 def get_url():
     url = os.environ.get('RAILWAY_URL', 'URL não encontrada')
     return f"Sua URL é: {url}"
